@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd
+http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.10.xsd">
+
+    <changeSet id="20211303" author="pwardowski">
+
+        <createTable tableName="users">
+            <column name="id" type="bigint" autoIncrement="true" >
+                <constraints primaryKey="true" primaryKeyName="users_id_pk" />
+            </column>
+            <column name="username" type="varchar(255)" >
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="varchar(255)" >
+                <constraints nullable="false" />
+            </column>
+            <column name="role_id" type="bigint" />
+        </createTable>
+
+        <createTable tableName="roles">
+            <column name="id" type="bigint" autoIncrement="true" >
+                <constraints primaryKey="true" primaryKeyName="roles_id_pk" />
+            </column>
+            <column name="name" type="varchar(255)" >
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <createTable tableName="permissions">
+            <column name="id" type="bigint" autoIncrement="true" >
+                <constraints primaryKey="true" primaryKeyName="permission_id_pk" />
+            </column>
+            <column name="name" type="varchar(255)" >
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <createTable tableName="roles_permissions">
+            <column name="id" type="bigint" autoIncrement="true" >
+                <constraints primaryKey="true" primaryKeyName="roles_permissions_id_pk" />
+            </column>
+            <column name="role_id" type="bigint" />
+            <column name="permission_id" type="bigint" />
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,19 @@
+POST http://localhost:8080/v1/vis-test/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6InZpc2lvbm1hdGUuc2UiLCJpYXQiOjE2MTU3NTY0MDQsImV4cCI6MTYxNjM2MTIwNH0.9m-i_6iyc7Fa9sgPm9CrR0n5KytxoMUvFOiT7CDHXPXK-x3LooTeYaWRE36_CzhVXNP7BiazR45YblhS9mcKMg
+
+{
+  "username": "anon",
+  "password": "anon",
+  "roleId" : 2
+}
+
+###
+
+GET http://localhost:8080/v1/vis-test/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6InZpc2lvbm1hdGUuc2UiLCJpYXQiOjE2MTU3NTY0MDQsImV4cCI6MTYxNjM2MTIwNH0.9m-i_6iyc7Fa9sgPm9CrR0n5KytxoMUvFOiT7CDHXPXK-x3LooTeYaWRE36_CzhVXNP7BiazR45YblhS9mcKMg

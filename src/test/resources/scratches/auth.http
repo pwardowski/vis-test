@@ -1,0 +1,13 @@
+POST http://localhost:8080/v1/vis-test/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "username" : "admin",
+  "password" : "admin"
+}
+
+
+###
+
